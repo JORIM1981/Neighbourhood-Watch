@@ -65,15 +65,6 @@ python manage.py makemigrations pictures
 ```
 Open the application on your browser `127.0.0.1:8000`. 
 
-### Api Endpoints
- * https://awwards-jorim.herokuapp.com/api/users/
- * https://awwards-jorim.herokuapp.com/api/profile/
- * https://awwards-jorim.herokuapp.com/api/posts/
-
-  
-
-
-
 
 ## Technology used
 
