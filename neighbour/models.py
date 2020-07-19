@@ -17,15 +17,15 @@ class Profile(models.Model):
         return self.user
 
 class Neighbourhood(models.Model):
-    Neighborhood=models.CharField(max_length=30,null=True)
-    Neighborhood_location=models.CharField(max_length=30,null=True)
+    Neighbourhood=models.CharField(max_length=30,null=True)
+    Neighbourhood_location=models.CharField(max_length=30,null=True)
     population=models.PositiveIntegerField(default=0)
     police_no=models.PositiveIntegerField(default=112)
     hospital_no=models.PositiveIntegerField(default=911)
     user=models.ForeignKey(User)
  
     def __str__(self):
-        return self.Neighborhood
+        return self.Neighbourhood
 
     def create_neighbourhood(self):
         self.save()
@@ -52,7 +52,7 @@ class Neighbourhood(models.Model):
         pass
 
     @classmethod
-    def find_neighbourhood(neigbourhood_id):
+    def find_neighbourhood(neighbourhood_id):
         query = cls.objects.filter(name__icontains=search_term)
         return query
 
