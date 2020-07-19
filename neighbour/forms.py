@@ -1,6 +1,8 @@
 from .models import Profile, Neighbourhood, Business ,Post
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
+
+
 class UpdateProfile(forms.ModelForm):
     class Meta:
         model=Profile
