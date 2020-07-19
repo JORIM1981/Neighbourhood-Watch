@@ -156,7 +156,7 @@ def search_results(request):
         searched_photo = Images.search_by_title(search_term)
         photos = Images.objects.filter(name=searched_photo).all()
         message = f"{search_term}"
-        return render(request, 'searched.html', {"message": message, "photos": searched_photo})
+        return render(request, 'search.html', {"message": message, "photos": searched_photo})
     else:
         message = 'Try Again'
-        return render(request, 'searched.html', {"message": message})
+        return render(request, 'search.html', {"message": message})
