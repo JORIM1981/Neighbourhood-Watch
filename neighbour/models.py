@@ -22,7 +22,7 @@ class Neighbourhood(models.Model):
     population=models.PositiveIntegerField(default=0)
     police_no=models.PositiveIntegerField(default=112)
     hospital_no=models.PositiveIntegerField(default=911)
-    user=models.ForeignKey(User)
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
  
     def __str__(self):
         return self.Neighbourhood
@@ -59,7 +59,7 @@ class Neighbourhood(models.Model):
 
 class Follow(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
-    estate=models.ForeignKey(Neighbourhood)
+    estate=models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
 
     def __str__(self):
         return self.user.username
@@ -104,8 +104,8 @@ class Post(models.Model):
     image_name=models.CharField(max_length=30)
     message=models.TextField(max_length=100,null=True,blank=True)
     estate=models.ForeignKey(Neighbourhood,on_delete=models.CASCADE,null=True,blank=True)
-    user_profile=models.ForeignKey(Profile)
-    user=models.ForeignKey(User)
+    user_profile=models.ForeignKey(Profile,on_delete=models.CASCADE)
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
 
     def save_post(self):
        
