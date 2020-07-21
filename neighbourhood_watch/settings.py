@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'neighbour',
     'bootstrap3',
+    'bootstrap4',
     'tinymce',
 
 ]
